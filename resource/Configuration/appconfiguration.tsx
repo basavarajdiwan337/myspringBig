@@ -1,18 +1,45 @@
 import React from 'react';
 import { Dimensions, Image, } from 'react-native';
-import { STYLES} from './allpages';
+import { STYLE,PALETTE,FONT} from './stylevalue';
 export const SigninPage = {
-  signInLogo : require("../Assets/images/flowerPotImg.png"),
-  signInLogoposition : STYLES.STYLE.center,
-  signinTittle : 'Sign in',
-  signinTittleColor :STYLES.PALETTE.BLACK,
-  fontFamily : STYLES.FONT.AileronBold
+  signInBackground : require("../potcoAssets/images/background.png"),
+  signinTittle : 'Log in',
+  signinTittleColor : PALETTE.WHITE,
+  signinTittlefontFamily : FONT.AileronBold,
+  signInLogo : require("../potcoAssets/images/logo.png"),
+  signInLogoposition : STYLE.center,
+  signDiscription : 'Enter your phone number',
+  signDiscriptionColor : PALETTE.WHITE,
+  signDiscriptionFontfamily : FONT.AileronBold,
+  signTextinputBorderColor : PALETTE.POTCO_GREEN,
+  signTextinputBackgroundColor : PALETTE.WHITE,
+  signTextinputTextColor:PALETTE.BLACK,
+  signinTextinputFontFamilty: FONT.AileronBold,
+  signinButtonColor : PALETTE.POTCO_GREEN,
+  signinButtonText : 'Continue',
+  signinButtonTextColor : PALETTE.WHITE,
+  signinButtonFontfamily : FONT.AileronBold,
+  
 };
 
 export const PinEntryPage = {
-  pinEntryLogo : require("../Assets/images/flowerPotImg.png"),
-  pinEntryLogoposition : STYLES.STYLE.center,
-  pinEntryTittle : 'well come to pinEntry page',
-  pinEntryTittleColor :STYLES.PALETTE.BLUE,
-  fontFamily : STYLES.FONT.AileronRegular
+  pinpagebackgroud: require("../potcoAssets/images/background1.png"),
+  pinpageTittle : 'Log In',
+  pinpageTittleColor :PALETTE.WHITE,
+  pinTitlefontFamily : FONT.AileronBold,
+  pinEntryLogo : require("../potcoAssets/images/logo.png"),
+  pinEntryLogoposition : STYLE.center,
+  pinEntryDescription : 'A temporary pin has been sent to your phone and email (if applicable) - please enter it below to proceed',
+  enterpintext : 'Enter Pin',
+  pinEntryDescriptionfontFamily : FONT.AileronRegular,
+  pinEntryDescriptionColor :PALETTE.WHITE,
+  pinEntryInputboxposition: STYLE.center,
+  pinEntryInputboxbordercolor:PALETTE.POTCO_GREEN,
+  pinEntryInputboxbackgroudbcolor:PALETTE.WHITE,
+  signinTextinputFontFamily: FONT.AileronRegular,
+  pinentrycancelbuttoncolor:PALETTE.POTCO_GREEN,
+  pinEntryInputboxTextcolor:PALETTE.BLACK,
+  pinEntryButtonText : 'Login',
+  pinEntryButtonTextColor : PALETTE.WHITE,
+  pinEntryButtonFontfamily : FONT.AileronBold,
 };

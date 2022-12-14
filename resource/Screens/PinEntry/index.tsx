@@ -1,33 +1,49 @@
 import React from 'react';
-import { View, Text, SafeAreaView, Dimensions, Button } from 'react-native';
+import { View, Text, SafeAreaView, Dimensions, Button, ImageBackground, Image, TextInput } from 'react-native';
 const device = Dimensions.get('window');
 export const deviceWidth = device.width;
 export const deviceHeight = device.height;
+import globalStyle from '../../Configuration/SytleSheet';
 import { PAGES } from '../../Configuration/allpages';
+import ComponentButton from '../../components/Button';
 
-const PinEntry = ({ navigation }:any) => {
-const onPressButton = () =>{
-    navigation.navigate('Signin');
-}
+const PinEntry = ({ navigation }: any) => {
+    const tosigninPage = () => {
+        navigation.navigate('Signin');
+    }
     return (
-        <SafeAreaView style={{ width: deviceWidth,
-            alignSelf: 'center',
-            alignContent: 'center',
-            alignItems: 'center',
-            flex: 1,
-            backgroundColor: 'gray',
-            justifyContent:'center'}}>
-            <View>
-                <Text>
-                   {PAGES.PinEntryPage.pinEntryTittle}
+        <ImageBackground source={PAGES.PinEntryPage.pinpagebackgroud} style={globalStyle.pinpagebackgroud}>
+            <View style={globalStyle.pinpagecontainer}>
+                <Text style={globalStyle.pinpageTittle}>
+                    {PAGES.PinEntryPage.pinpageTittle}
                 </Text>
-                <Button
-        title="Previous Page"
-        color="#f194ff"
-        onPress={onPressButton}
-      />
+                <View style={globalStyle.pinpageLogoView}>
+
+                    <Image style={globalStyle.pinPageLogo} source={PAGES.PinEntryPage.pinEntryLogo} />
+                </View>
+                <View style={globalStyle.pinpageDescriptionview}>
+                    <Text style={globalStyle.pinpageDescription}>
+                        {PAGES.PinEntryPage.pinEntryDescription}
+                    </Text>
+                </View>
+                <Text style={globalStyle.enterpintext}>{PAGES.PinEntryPage.enterpintext}</Text>
+                <TextInput
+                    style={globalStyle.pinentryinputBox}
+                />
+                <View style={globalStyle.continueButtonView}>
+                    <ComponentButton
+                        text={PAGES.PinEntryPage.pinEntryButtonText}
+                        onPress={() => {
+                            tosigninPage();
+                        }}
+                    />
+                </View>
+                <Text style={globalStyle.pinentrycancelbuttoncolor} onPress={tosigninPage}>cancel</Text>
+
             </View>
-        </SafeAreaView>
+        </ImageBackground>
+
+
     );
 };
 

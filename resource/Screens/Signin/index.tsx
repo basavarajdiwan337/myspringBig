@@ -1,46 +1,55 @@
 import React from 'react'
 import { View, Text, SafeAreaView, Button, Dimensions, Image } from 'react-native';
 import { useRoute } from '@react-navigation/native';
+import globalStyle from '../../Configuration/SytleSheet';
+import { PAGES } from '../../Configuration/allpages';
+import ComponentButton from '../../components/Button';
+import { ImageBackground } from 'react-native';
+import { TextInput } from 'react-native';
 const device = Dimensions.get('window');
 export const deviceWidth = device.width;
 export const deviceHeight = device.height;
-import globalStyle  from '../../Configuration/SytleSheet';
-import { PAGES } from '../../Configuration/allpages';
 const Signin = ({ navigation }: any) => {
-    const onPressButton = () => {
+
+    const topinEntryPage = () => {
         navigation.navigate('PinEntry');
     }
- 
+
 
     const route = useRoute();
     console.log("route=======>", route.name);
 
     return (
-        <SafeAreaView style={globalStyle.signincontainer}>
-            <View style={{ backgroundColor: 'blue', flex: 1,width:deviceWidth,justifyContent:'center' }}>
-           <Image style={globalStyle.signinPageLogo} source={PAGES.SigninPage.signInLogo}/>
-          
-            </View>
-            <View style={{ flex: 1,backgroundColor:'yellow',width:deviceWidth,justifyContent:'center' }}>
+        <ImageBackground source={PAGES.SigninPage.signInBackground} style={globalStyle.signinBackground}>
+
+            <View style={globalStyle.signincontainer}>
                 <Text style={globalStyle.siginTittleText}>
-                   {PAGES.SigninPage.signinTittle}
+                    {PAGES.SigninPage.signinTittle}
                 </Text>
-                <Button
-                    title="Next Page"
-                    color="#f194ff"
-                    onPress={onPressButton}
+                <View style={globalStyle.signinLogoView}>
+                    <Image
+                        style={globalStyle.signinPageLogo}
+                        source={PAGES.SigninPage.signInLogo} />
+                </View>
+
+                <Text style={globalStyle.siginDescription}>
+                    {PAGES.SigninPage.signDiscription}
+                </Text>
+
+                <TextInput
+                    style={globalStyle.textinputStyle}
+
                 />
+                <View style={globalStyle.continueButtonView}>
+                    <ComponentButton
+                        text={PAGES.SigninPage.signinButtonText}
+                        onPress={() => {
+                            topinEntryPage();
+                        }}
+                    />
+                </View>
             </View>
-            <View style={{ flex: 1,backgroundColor:'green',width:deviceWidth,justifyContent:'center' }}>
-                <Text style={{ textAlign: 'center',color:'black' }}>
-                    Hi, Well come Signin.
-                </Text>
-                
-
-
-            </View>
-
-        </SafeAreaView>
+        </ImageBackground>
     );
 };
 
