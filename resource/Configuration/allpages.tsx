@@ -1,4 +1,5 @@
 
 import * as PAGES from './appconfiguration';
 import * as STYLESHEET from './SytleSheet';
-export { PAGES, STYLESHEET};
+import * as STYLES from './stylevalue';
+export { PAGES, STYLESHEET, STYLES};

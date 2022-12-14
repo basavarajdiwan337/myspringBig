@@ -1,18 +1,18 @@
 import React from 'react';
 import { Dimensions, Image, } from 'react-native';
-
+import { STYLES} from './allpages';
 export const SigninPage = {
   signInLogo : require("../Assets/images/flowerPotImg.png"),
-  signInLogoposition : 'flex-start',
+  signInLogoposition : STYLES.STYLE.center,
   signinTittle : 'Sign in',
-  signinTittleColor :'#000',
-  fontFamily : 'Aileron-Regular'
+  signinTittleColor :STYLES.PALETTE.BLACK,
+  fontFamily : STYLES.FONT.AileronBold
 };
 
 export const PinEntryPage = {
   pinEntryLogo : require("../Assets/images/flowerPotImg.png"),
-  pinEntryLogoposition : "center",
+  pinEntryLogoposition : STYLES.STYLE.center,
   pinEntryTittle : 'well come to pinEntry page',
-  pinEntryTittleColor :'#000',
-  fontFamily : 'Aileron-Regular'
+  pinEntryTittleColor :STYLES.PALETTE.BLUE,
+  fontFamily : STYLES.FONT.AileronRegular
 };
