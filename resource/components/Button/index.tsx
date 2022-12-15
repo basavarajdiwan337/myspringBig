@@ -1,19 +1,21 @@
 import React, { memo } from "react";
-import { TouchableOpacity } from "react-native";
+import { StyleProp, TouchableOpacity } from "react-native";
 import {View,Text} from 'react-native';
 import globalStyle from '../../Configuration/SytleSheet'
 
 type Props = {
 text : string;
 onPress?: () => void;
+customStyleButton?: StyleProp<any>;
+cusomStyleText?: StyleProp<any>;
 }
 
 const Button = (props: Props) => {
-const{text, onPress =()=>{}}=props;
+const{text, onPress =()=>{},customStyleButton = null,cusomStyleText = null}=props;
     return (
         <View style={globalStyle.buttonView}>
-            <TouchableOpacity onPress={onPress} style={globalStyle.buttonTouchView}>
-                <Text style={globalStyle.buttonFont}>
+            <TouchableOpacity onPress={onPress} style={customStyleButton}>
+                <Text style={cusomStyleText}>
                  {text}
                 </Text>
             </TouchableOpacity>
@@ -21,4 +23,4 @@ const{text, onPress =()=>{}}=props;
         </View>
     );
 }
-export default Button;
+export default memo(Button);

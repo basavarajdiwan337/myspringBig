@@ -14,8 +14,6 @@ const Signin = ({ navigation }: any) => {
     const topinEntryPage = () => {
         navigation.navigate('PinEntry');
     }
-
-
     const route = useRoute();
     console.log("route=======>", route.name);
 
@@ -46,8 +44,11 @@ const Signin = ({ navigation }: any) => {
                         onPress={() => {
                             topinEntryPage();
                         }}
+                        customStyleButton={globalStyle.buttonTouchView}
+                        cusomStyleText={globalStyle.buttonFont}
                     />
                 </View>
+                
             </View>
         </ImageBackground>
     );

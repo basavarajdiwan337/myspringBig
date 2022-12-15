@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, FlexAlignType, StyleSheet } from "react-native";
 import { PAGES } from '../Configuration/allpages';
 import { FONT, PALETTE } from "./stylevalue";
 const device = Dimensions.get('window');
@@ -19,18 +19,16 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   signinLogoView : {
-    justifyContent:'center',
-    alignSelf:'center',
     width:deviceWidth,
     height:deviceHeight*0.20,
-    marginTop:'5%'
+    marginTop:'5%',
   },
 
   signinPageLogo: {
-    width:'100%',
-    height:'100%',
+    width:deviceWidth *0.35,
+    height:deviceHeight*0.20,
     resizeMode: 'contain',
-    // alignSelf: PAGES.SigninPage.signInLogoposition
+    alignSelf: PAGES.SigninPage.signInLogoposition as FlexAlignType,
   },
   siginTittleText: {
     textAlign: 'center',
@@ -67,7 +65,8 @@ export default StyleSheet.create({
     width:deviceWidth,
     alignContent:'center',
     alignSelf:'center',
-    alignItems:'center'
+    alignItems:'center',
+    flex:1,
   },
   pinpagebackgroud:{
     height:deviceHeight,
@@ -145,10 +144,46 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  pinbuttonTouchView: {
+    backgroundColor: PAGES.PinEntryPage.pinEntryButtonColor,
+    height: deviceHeight * 0.05,
+    width: deviceWidth * 0.40,
+    borderRadius: 5,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   buttonFont: {
     fontFamily: PAGES.SigninPage.signinButtonFontfamily,
     fontSize: 18,
     color: PAGES.SigninPage.signinButtonTextColor
-  }
+  },
+  pinbuttonFont: {
+    fontFamily: PAGES.PinEntryPage.pinEntryButtonFontfamily,
+    fontSize: 18,
+    color: PAGES.PinEntryPage.pinEntryButtonTextColor
+  },
 
+  //Tabbar
+   tabbarStyle :{ width: deviceWidth * 0.20,
+    backgroundColor: 'blue',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 60,
+    shadowColor: 'blue',
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20
+  },
+
+  //ImageBackground style
+  ImageBackgroundStyle : {
+    height:deviceHeight,
+    width:deviceWidth,
+    justifyContent:'center',
+    alignSelf:'center',
+    alignItems:'center',
+    alignContent:'center'
+  },
 });

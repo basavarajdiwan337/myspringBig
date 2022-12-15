@@ -7,9 +7,10 @@ import globalStyle from '../../Configuration/SytleSheet';
 import { PAGES } from '../../Configuration/allpages';
 import ComponentButton from '../../components/Button';
 
+
 const PinEntry = ({ navigation }: any) => {
     const tosigninPage = () => {
-        navigation.navigate('Signin');
+        navigation.navigate('Rewards');
     }
     return (
         <ImageBackground source={PAGES.PinEntryPage.pinpagebackgroud} style={globalStyle.pinpagebackgroud}>
@@ -36,10 +37,11 @@ const PinEntry = ({ navigation }: any) => {
                         onPress={() => {
                             tosigninPage();
                         }}
+                        customStyleButton={globalStyle.pinbuttonTouchView}
+                        cusomStyleText={globalStyle.pinbuttonFont}
                     />
                 </View>
                 <Text style={globalStyle.pinentrycancelbuttoncolor} onPress={tosigninPage}>cancel</Text>
-
             </View>
         </ImageBackground>
 
