@@ -1,3 +1,9 @@
+import { Dimensions } from "react-native";
+
+const device = Dimensions.get('window');
+export const deviceWidth = device.width;
+export const deviceHeight = device.height;
+
 export const STYLE = {
    center : 'center',
    left : 'flex-start',

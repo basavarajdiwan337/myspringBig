@@ -1,29 +1,34 @@
 import React from 'react';
 import { Dimensions, Image, } from 'react-native';
 import { STYLE,PALETTE,FONT} from './stylevalue';
-import Rewardstab from '../components/Icons/Rewards';
+import InstaJaneRewardIcon from '../components/Icons/instaJaneRewardIcon';
+import InstaJaneRewardIconActive from '../components/Icons/instaJaneRewardIconActive';
 import Offerstab from '../components/Icons/Offers';
 
 
 export const SigninPage = {
   signInBackground : require("../potcoAssets/images/background.png"),
-
+  signinTittlePosition :[2,'signinTittlePosition'],
   signinTittle : 'Log in',
   signinTittleColor : PALETTE.WHITE,
   signinTittlefontFamily : FONT.AileronBold,
 
+  signinLogoPagePosition :[1,'signinLogoPagePosition'],
   signInLogo : require("../potcoAssets/images/logo.png"),
   signInLogoposition : STYLE.center,
 
+  signDiscriptionPosition :[3,'signDiscriptionPosition'],
   signDiscription : 'Enter your phone number',
   signDiscriptionColor : PALETTE.WHITE,
   signDiscriptionFontfamily : FONT.AileronBold,
 
+  signininputBoxPosition : [4,'signininputBoxPosition'],
   signTextinputBorderColor : PALETTE.POTCO_GREEN,
   signTextinputBackgroundColor : PALETTE.WHITE,
   signTextinputTextColor:PALETTE.BLACK,
   signinTextinputFontFamilty: FONT.AileronBold,
 
+  signinButtonPosition : [5,'signinButtonPosition'],
   signinButtonColor : PALETTE.POTCO_GREEN,
   signinButtonText : 'Continue',
   signinButtonTextColor : PALETTE.WHITE,
@@ -60,7 +65,8 @@ export const PinEntryPage = {
 
 export const Rewards = {
   MainStackBackground : require("../potcoAssets/images/background.png"),
-  rewardTab : <Rewardstab />
+  rewardTab : <InstaJaneRewardIcon />,
+  RewardsActive : <InstaJaneRewardIconActive />
 }
 
 export const Offers = {

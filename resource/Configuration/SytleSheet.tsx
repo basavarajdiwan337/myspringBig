@@ -57,7 +57,8 @@ export default StyleSheet.create({
       fontSize:18
   },
   continueButtonView:{
-       marginTop:'8%'
+       marginTop:'8%',
+       
   },
   
    //PinEntry Page Styles
@@ -166,12 +167,13 @@ export default StyleSheet.create({
   },
 
   //Tabbar
-   tabbarStyle :{ width: deviceWidth * 0.20,
+   tabbarStyle :{ 
+    width: deviceWidth * 0.20,
     backgroundColor: 'blue',
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 60,
+    height: deviceHeight * 0.072,
     shadowColor: 'blue',
     borderTopLeftRadius:20,
     borderTopRightRadius:20
