@@ -10,7 +10,7 @@ import ComponentButton from '../../components/Button';
 
 const PinEntry = ({ navigation }: any) => {
     const tosigninPage = () => {
-        navigation.navigate('Rewards');
+        navigation.navigate('Shops');
     }
     return (
         <ImageBackground source={PAGES.PinEntryPage.pinpagebackgroud} style={globalStyle.pinpagebackgroud}>
