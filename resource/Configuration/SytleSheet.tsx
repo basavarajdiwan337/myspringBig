@@ -131,6 +131,67 @@ export default StyleSheet.create({
     color:  PAGES.PinEntryPage.pinentrycancelbuttoncolor,
   },
 
+  //Shopspage
+  Shopspagebackgroud: {
+    width: deviceWidth,
+    height:deviceHeight,
+    alignSelf: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+  },
+  registerTittleText:{
+    textAlign: 'center',
+    color: PAGES.ShopsPage.registerTittleTextcolor,
+    fontFamily: PAGES.ShopsPage.registerTittleTextfontfamily,
+    fontSize: 15,
+    marginTop:'10%',
+    marginBottom:'10%'
+  },
+  NonregisterTittleText:{
+    width: deviceWidth*0.70,
+    textAlign: 'center',
+    color: PAGES.ShopsPage.NonRegisterTitleTextcolor,
+    fontFamily: PAGES.ShopsPage.NonRegisterTitleTextfontfamily,
+    fontSize: 15,
+    marginTop:'10%',
+    marginBottom:'10%'
+  },
+  Wrap:{
+    paddingVertical: '5%',
+    paddingHorizontal: '5%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor:PAGES.ShopsPage.WrapbackgroundColor,
+    borderRadius: 10,
+    borderWidth: 1.5,
+    borderColor:PAGES.ShopsPage.WrapBorderColor,
+    width: deviceWidth*0.80,
+    height:deviceHeight*0.10,
+    alignSelf: 'center',
+    // marginTop:'0%'
+  },
+  WrapActive:{
+    backgroundColor: PAGES.ShopsPage.WrapbackgroundColorActive,
+  },
+  name: {
+    fontSize: 18,
+    color:PAGES.ShopsPage.WrapNameTextcolor,
+    textAlign:'center',
+    fontFamily:  PAGES.ShopsPage.WrapNameTextcolorfontfamily, 
+    alignSelf:'center'
+  },
+  nameActive: {
+    color:PAGES.ShopsPage.WrapNameTextcolorActive,
+    fontFamily:  PAGES.ShopsPage.WrapNameTextcolorfontfamilyActive,
+  },
+  shopsmerchantimage: {
+    height: deviceHeight*0.15,
+    resizeMode: 'contain',
+    width: deviceWidth*0.15,
+    marginLeft: '5%',
+    marginRight: '5%',
+  },
+
   // Button style
   buttonView: {
     justifyContent: 'center',

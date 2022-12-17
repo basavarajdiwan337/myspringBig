@@ -63,6 +63,23 @@ export const PinEntryPage = {
   pinentrycancelbuttoncolor:PALETTE.WHITE,
 };
 
+export const ShopsPage = {
+  Shopspagebackgroud: require("../potcoAssets/images/background.png"),
+  RegisterTitle:'Select your state program',
+  registerTittleTextcolor:PALETTE.WHITE,
+  registerTittleTextfontfamily:FONT.AileronBold,
+  NonRegisterTitle :'Click below to register for one of the following state programs',
+  NonRegisterTitleTextcolor:PALETTE.WHITE,
+  NonRegisterTitleTextfontfamily:FONT.AileronBold,
+  WrapbackgroundColor:PALETTE.POTCO_GREEN,
+  WrapBorderColor : PALETTE.WHITE,
+  WrapbackgroundColorActive : PALETTE.TRANSPARENT,
+  WrapNameTextcolor: PALETTE.WHITE,
+  WrapNameTextcolorfontfamily:FONT.AileronBold,
+  WrapNameTextcolorActive : PALETTE.RED,
+  WrapNameTextcolorfontfamilyActive:FONT.AileronBold,
+};
+
 export const Rewards = {
   MainStackBackground : require("../potcoAssets/images/background.png"),
   rewardTab : <InstaJaneRewardIcon />,
