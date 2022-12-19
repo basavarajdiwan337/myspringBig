@@ -15,10 +15,10 @@ const Signin = ({ navigation }: any) => {
         navigation.navigate('PinEntry');
     }
     const route = useRoute();
-    console.log("route=======>", route.name);
+    console.log("route=======>", route.name,);
 
     return (
-        <ImageBackground source={PAGES.SigninPage.signInBackground} style={globalStyle.signinBackground}>
+        <ImageBackground source={PAGES.Feature.isSameBackground === true ?  PAGES.Background.pageBackground : PAGES.SigninPage.signInBackground } style={globalStyle.signinBackground}>
 
             <View style={globalStyle.signincontainer}>
                 <Text style={globalStyle.siginTittleText}>
@@ -30,9 +30,7 @@ const Signin = ({ navigation }: any) => {
                         source={PAGES.SigninPage.signInLogo} />
                 </View>
 
-                <Text style={globalStyle.siginDescription}>
-                    {PAGES.SigninPage.signDiscription}
-                </Text>
+                
 
                 <TextInput
                     style={globalStyle.textinputStyle}

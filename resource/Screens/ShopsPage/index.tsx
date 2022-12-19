@@ -17,7 +17,7 @@ const Shops = ({ navigation }: any) => {
 
 
     return (
-        <ImageBackground source={PAGES.ShopsPage.Shopspagebackgroud} style={globalStyle.Shopspagebackgroud}>
+        <ImageBackground source={PAGES.Feature.isSameBackground === true ?  PAGES.Background.pageBackground : PAGES.ShopsPage.Shopspagebackgroud} style={globalStyle.Shopspagebackgroud}>
         <ScrollView showsVerticalScrollIndicator={false}>
             <View>
                 <Text style={globalStyle.registerTittleText}>{PAGES.ShopsPage.RegisterTitle}</Text>

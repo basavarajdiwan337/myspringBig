@@ -1,5 +1,6 @@
 import React from 'react';
-import { ImageBackground, View, Text, Dimensions } from 'react-native';
+import { ImageBackground, View, Text, Dimensions, Image } from 'react-native';
+import LogoutButton from '../../components/LogoutButton';
 import Tabs from '../../components/TabNavigation/index';
 import { PAGES } from '../../Configuration/allpages';
 import globalStyle from '../../Configuration/SytleSheet';
@@ -7,19 +8,28 @@ import globalStyle from '../../Configuration/SytleSheet';
 const device = Dimensions.get('window');
 export const deviceWidth = device.width;
 export const deviceHeight = device.height;
-const Profile = () =>{
+const Profile = () => {
     return (
-<ImageBackground style={globalStyle.ImageBackgroundStyle} source={PAGES.Profile.MainStackBackground}>
-    <View>
-        <Text>
-            Hi,well come to Profile!!!
-        </Text>
-        </View>
-        <View style={{bottom:0,position: 'absolute',}}>
-    <Tabs/>
-    </View>
-  
-</ImageBackground>
+        <ImageBackground style={globalStyle.ImageBackgroundStyle} source={PAGES.Feature.isSameBackground === true ? PAGES.Background.pageBackground : PAGES.Profile.MainStackBackground}>
+            <View style={{ alignSelf: 'flex-end' }}>
+                <LogoutButton />
+            </View>
+            <View style={globalStyle.rewardPageContainer}>
+            <View style={globalStyle.RewardPageLogoView}>
+                         <Image
+                            style={globalStyle.signinPageLogo}
+                            source={PAGES.SigninPage.signInLogo} />
+                     
+            </View>
+            <Text style={globalStyle.siginTittleText}>
+                              {PAGES.Profile.ProfileTittle}
+                          </Text>
+            </View>
+            <View style={{ bottom: 0, position: 'absolute', }}>
+                <Tabs />
+            </View>
+
+        </ImageBackground>
     );
 };
 export default Profile;

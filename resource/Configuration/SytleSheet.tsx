@@ -192,6 +192,22 @@ export default StyleSheet.create({
     marginRight: '5%',
   },
 
+  //Rewards Page
+  RewardPageLogoView : {
+    width:deviceWidth * 0.40,
+    height:deviceHeight*0.20,
+    marginTop:'0%',
+  },
+
+  rewardPageContainer: {
+    width: deviceWidth,
+    height:deviceHeight,
+    alignSelf: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    marginTop:'-15%',
+  },
+
   // Button style
   buttonView: {
     justifyContent: 'center',
@@ -244,9 +260,14 @@ export default StyleSheet.create({
   ImageBackgroundStyle : {
     height:deviceHeight,
     width:deviceWidth,
-    justifyContent:'center',
-    alignSelf:'center',
-    alignItems:'center',
-    alignContent:'center'
+ 
+  },
+  
+  //logoutButton 
+  logoutLogo: {
+    width:deviceWidth *0.22,
+    height:deviceHeight*0.08,
+    resizeMode: 'contain',
+    alignSelf: PAGES.SigninPage.signInLogoposition as FlexAlignType,
   },
 });

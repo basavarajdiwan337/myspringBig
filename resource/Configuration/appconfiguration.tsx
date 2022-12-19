@@ -5,13 +5,23 @@ import InstaJaneRewardIcon from '../components/Icons/instaJaneRewardIcon';
 import InstaJaneRewardIconActive from '../components/Icons/instaJaneRewardIconActive';
 import Offerstab from '../components/Icons/Offers';
 
+export const Feature = {
+  isGeofence : false,
+  isOneLocatio : false,
+  isSameBackground : false,
+  isReregistration : false,
+}
+
+export const Background = {
+  pageBackground : require("../potcoAssets/images/background1.png"),
+}
 
 export const SigninPage = {
   signInBackground : require("../potcoAssets/images/background.png"),
   signinTittlePosition :[2,'signinTittlePosition'],
-  signinTittle : 'Log in',
+  signinTittle : 'log In',
   signinTittleColor : PALETTE.WHITE,
-  signinTittlefontFamily : FONT.AileronBold,
+  signinTittlefontFamily : FONT.AileronRegular,
 
   signinLogoPagePosition :[1,'signinLogoPagePosition'],
   signInLogo : require("../potcoAssets/images/logo.png"),
@@ -83,22 +93,34 @@ export const ShopsPage = {
 export const Rewards = {
   MainStackBackground : require("../potcoAssets/images/background.png"),
   rewardTab : <InstaJaneRewardIcon />,
-  RewardsActive : <InstaJaneRewardIconActive />
+  RewardsActive : <InstaJaneRewardIconActive />,
+  RewardsTittle : 'Rewards',
 }
 
 export const Offers = {
   MainStackBackground : require("../potcoAssets/images/background2.png"),
-  Offerstab : <Offerstab />
+  Offerstab : <Offerstab />,
+  OffersTittle : 'Offers',
+
 }
 
 export const Profile = {
   MainStackBackground : require("../potcoAssets/images/background1.png"),
+  ProfileTittle : 'Profile',
 }
 
 export const Shop = {
   MainStackBackground : require("../potcoAssets/images/background.png"),
+  ShopTittle : 'Shop Online',
+
 }
 
 export const Messages = {
   MainStackBackground : require("../potcoAssets/images/background2.png"),
+  MessagesTittle : 'Messages',
+
+}
+
+export const Logout = {
+  Image : require("../potcoAssets/images/logo.png"),
 }

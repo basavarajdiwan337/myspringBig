@@ -9,11 +9,14 @@ import ComponentButton from '../../components/Button';
 
 
 const PinEntry = ({ navigation }: any) => {
-    const tosigninPage = () => {
+    const toMerchantListPage = () => {
         navigation.navigate('Shops');
     }
+    const tosigninPage = () => {
+        navigation.navigate('Signin');
+    }
     return (
-        <ImageBackground source={PAGES.PinEntryPage.pinpagebackgroud} style={globalStyle.pinpagebackgroud}>
+        <ImageBackground source={PAGES.Feature.isSameBackground === true ?  PAGES.Background.pageBackground : PAGES.PinEntryPage.pinpagebackgroud} style={globalStyle.pinpagebackgroud}>
             <View style={globalStyle.pinpagecontainer}>
                 <Text style={globalStyle.pinpageTittle}>
                     {PAGES.PinEntryPage.pinpageTittle}
@@ -35,7 +38,7 @@ const PinEntry = ({ navigation }: any) => {
                     <ComponentButton
                         text={PAGES.PinEntryPage.pinEntryButtonText}
                         onPress={() => {
-                            tosigninPage();
+                            toMerchantListPage();
                         }}
                         customStyleButton={globalStyle.pinbuttonTouchView}
                         cusomStyleText={globalStyle.pinbuttonFont}
