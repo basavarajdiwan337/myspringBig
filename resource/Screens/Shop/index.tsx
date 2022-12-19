@@ -22,7 +22,7 @@ const Shops = () => {
                      
             </View>
             <Text style={globalStyle.siginTittleText}>
-                              {PAGES.SigninPage.signinTittle}
+                              {PAGES.Shop.ShopTittle}
                           </Text>
             </View>
             <View style={{ bottom: 0, position: 'absolute', }}>
