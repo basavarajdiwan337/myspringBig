@@ -10,6 +10,7 @@ import Offers from './resource/Screens/Offers';
 import Profile from './resource/Screens/Profile';
 import Shop from './resource/Screens/Shop';
 import Messages from './resource/Screens/Messages';
+import RegistrationForm from './resource/Screens/RegistrationForm';
 const Stack = createNativeStackNavigator();
 const App = () => {
 
@@ -28,11 +29,12 @@ const App = () => {
             <Stack.Screen name="Signin" component={Signin} />
             <Stack.Screen name="PinEntry" component={PinEntry} />
             <Stack.Screen name="Shops" component={ShopsPage} />
+            <Stack.Screen name="RegistrationForm" component={RegistrationForm} />
+            <Stack.Screen name="Messages" component={Messages}/>
             <Stack.Screen name="Rewards" component={Rewards}/>
             <Stack.Screen name="Offers" component={Offers}/>
             <Stack.Screen name="Profile" component={Profile}/>
             <Stack.Screen name="Shop" component={Shop}/>
-            <Stack.Screen name="Messages" component={Messages}/>
           </Stack.Navigator>
         </NavigationContainer>
     </SafeAreaView>

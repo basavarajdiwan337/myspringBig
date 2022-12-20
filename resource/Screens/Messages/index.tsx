@@ -14,7 +14,7 @@ const Messages = () => {
              <View style={{ alignSelf: 'flex-end' }}>
                 <LogoutButton />
             </View>
-            <View style={globalStyle.rewardPageContainer}>
+            <View style={PAGES.Feature.isOneLocation === true ? [globalStyle.rewardPageContainer,{marginTop:'2%'}] : globalStyle.rewardPageContainer}>
             <View style={globalStyle.RewardPageLogoView}>
                          <Image
                             style={globalStyle.signinPageLogo}

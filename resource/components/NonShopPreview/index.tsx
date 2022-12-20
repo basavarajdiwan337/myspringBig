@@ -13,7 +13,7 @@ const NonShopPreview = (props :Props) => {
     const{name,} = props;
 
         function onPressHandler() {
-           navigation.navigate('Signin');
+           navigation.navigate('RegistrationForm');
           }
     
         function onPressOut() {

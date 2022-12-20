@@ -9,8 +9,17 @@ import ComponentButton from '../../components/Button';
 
 
 const PinEntry = ({ navigation }: any) => {
+    let AlreadyRegistered = false;
     const toMerchantListPage = () => {
-        navigation.navigate('Shops');
+        if(PAGES.Feature.isOneLocation === true){
+             if(AlreadyRegistered === true){
+                navigation.navigate("Messages");
+             }else{
+                navigation.navigate("RegistrationForm");
+             }
+        }else{
+            navigation.navigate("Shops");
+        }
     }
     const tosigninPage = () => {
         navigation.navigate('Signin');

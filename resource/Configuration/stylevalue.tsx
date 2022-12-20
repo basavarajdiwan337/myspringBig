@@ -5,9 +5,12 @@ export const deviceWidth = device.width;
 export const deviceHeight = device.height;
 
 export const STYLE = {
-   center : 'center',
-   left : 'flex-start',
-   right : 'flex-end', 
+   CENTER : 'center',
+   LEFT : 'flex-start',
+   RIGHT : 'flex-end', 
+   TOP : [deviceWidth *0.20,deviceHeight*0.10,'0%'],
+   MIDDLE : [deviceWidth *0.20,deviceHeight*0.10,'17%'],
+   BOTTOM : [deviceWidth *0.20,deviceHeight*0.10,'36%'],
 };
 
 export const PALETTE = {

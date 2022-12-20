@@ -8,8 +8,8 @@ import ShopPreview from "../../components/ShopPreview";
 const NonRegister = () => {
     var nArray =['PotCo Location #4','PotCo Location #5','PotCo Location #6'];
         return(
-            nArray.map((item) => (
-                <View style={{ width: '100%', marginTop: '10%' }}>
+            nArray.map((item,index) => (
+                <View style={{ width: '100%', marginTop: '10%' }} key={index}>
                 <NonShopPreview name={item}/>
               </View>
             ))

@@ -1,13 +1,15 @@
-import React from 'react';
-import { Dimensions, Image, } from 'react-native';
+import React, { useState } from 'react';
+import { Dimensions, Image, View, } from 'react-native';
 import { STYLE,PALETTE,FONT} from './stylevalue';
 import InstaJaneRewardIcon from '../components/Icons/instaJaneRewardIcon';
 import InstaJaneRewardIconActive from '../components/Icons/instaJaneRewardIconActive';
 import Offerstab from '../components/Icons/Offers';
+import * as RNFS from 'react-native-fs';
+let nArray :any=[];
 
 export const Feature = {
   isGeofence : false,
-  isOneLocatio : false,
+  isOneLocation : false,
   isSameBackground : false,
   isReregistration : false,
 }
@@ -17,15 +19,18 @@ export const Background = {
 }
 
 export const SigninPage = {
+  
   signInBackground : require("../potcoAssets/images/background.png"),
-  signinTittlePosition :[2,'signinTittlePosition'],
-  signinTittle : 'log In',
+  signinTittlePosition :[1,'signinTittlePosition'],
+  signinTittle : 'Log In',
   signinTittleColor : PALETTE.WHITE,
   signinTittlefontFamily : FONT.AileronRegular,
 
-  signinLogoPagePosition :[1,'signinLogoPagePosition'],
+  signinLogoPagePosition :[2,'signinLogoPagePosition'],
   signInLogo : require("../potcoAssets/images/logo.png"),
-  signInLogoposition : STYLE.center,
+  LogoPos : STYLE.MIDDLE,
+  signInLogoposition : STYLE.CENTER,
+  
 
   signDiscriptionPosition :[3,'signDiscriptionPosition'],
   signDiscription : 'Enter your phone number',
@@ -53,7 +58,7 @@ export const PinEntryPage = {
   pinTitlefontFamily : FONT.AileronBold,
 
   pinEntryLogo : require("../potcoAssets/images/logo.png"),
-  pinEntryLogoposition : STYLE.center,
+  pinEntryLogoposition : STYLE.CENTER,
 
   pinEntryDescription : 'A temporary pin has been sent to your phone and email (if applicable) - please enter it below to proceed',
   pinEntryDescriptionfontFamily : FONT.AileronRegular,
@@ -120,6 +125,14 @@ export const Messages = {
   MessagesTittle : 'Messages',
 
 }
+
+export const RegistrationForm = {
+  MainStackBackground : require("../potcoAssets/images/background2.png"),
+  RegistrationFormTittle : 'Registration Form',
+  Signup :'Sign up'
+
+}
+
 
 export const Logout = {
   Image : require("../potcoAssets/images/logo.png"),

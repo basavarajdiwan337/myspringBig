@@ -20,15 +20,18 @@ export default StyleSheet.create({
   },
   signinLogoView : {
     width:deviceWidth,
-    height:deviceHeight*0.20,
+    height:deviceHeight*0.27,
     marginTop:'5%',
+    // backgroundColor:'red'
   },
 
   signinPageLogo: {
-    width:deviceWidth *0.35,
-    height:deviceHeight*0.20,
+    width:PAGES.SigninPage.LogoPos[0],
+    height:PAGES.SigninPage.LogoPos[1],
     resizeMode: 'contain',
     alignSelf: PAGES.SigninPage.signInLogoposition as FlexAlignType,
+    // backgroundColor:'blue',
+    marginTop:PAGES.SigninPage.LogoPos[2],
   },
   siginTittleText: {
     textAlign: 'center',

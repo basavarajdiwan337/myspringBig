@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, SafeAreaView, Button, Dimensions, Image } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import globalStyle from '../../Configuration/SytleSheet';
@@ -6,6 +6,7 @@ import { PAGES } from '../../Configuration/allpages';
 import ComponentButton from '../../components/Button';
 import { ImageBackground } from 'react-native';
 import { TextInput } from 'react-native';
+import RNFS from 'react-native-fs'
 const device = Dimensions.get('window');
 export const deviceWidth = device.width;
 export const deviceHeight = device.height;

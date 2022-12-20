@@ -7,8 +7,8 @@ import ShopPreview from "../../components/ShopPreview";
 const Register = () => {
     var nArray =['PotCo Location #1','PotCo Location #2','PotCo Location #3'];
     return (
-        nArray.map((item) => (
-            <View style={{ width: '100%', marginTop: '10%' }}>
+        nArray.map((item,index) => (
+            <View style={{ width: '100%', marginTop: '10%' }} key={index}>
                 <ShopPreview name={item} />
             </View>
         ))

@@ -142,7 +142,7 @@ if(item[0] === 1 && item[1] === "signinTittlePosition"){
     <View style={{alignSelf:'flex-end'}}>
       <LogoutButton />
     </View>
-<View style={globalStyle.rewardPageContainer}>
+    <View style={PAGES.Feature.isOneLocation === true ? [globalStyle.rewardPageContainer,{marginTop:'2%'}] : globalStyle.rewardPageContainer}>
     {value1}
     {value2}
     {value3}
