@@ -1,0 +1,65 @@
+import { Dimensions } from 'react-native';
+import { PLATFORM } from '../globalConstants/globalVariables';
+const windowWidth = Dimensions.get('window').width;
+const device = Dimensions.get('window');
+
+export const PALETTE = {
+  BLACK_BG: 'rgba(0,0,0, 0.3)',
+  LIGHT_GREEN : '#80BC00',
+  WHITE: '#fff',
+  GRAY44: '#707070',
+  GRAY_GREY_MINE_SHAFT: '#373737',
+  MEDIUM_DARK_SHADE_BLUE: '#003B4D',
+  EERIE_BLACK: '#1B1B1B',
+  MANDY_RED_SHADE: '#E35E57',
+  LIGHT_BLUE: '#3098D0',
+  LIGHT_GRAY: '#CECECE',
+  DARK_GRAY: '#5B5B5B',
+  BLACK: '#000',
+  RED: '#E35E57',
+  DARKGRAY: '#242424',
+  BUTTON_COLOR: '#172362',
+  SPLASH_SWIPER_ICON_COLOR: '#2F66C6',
+  SETTINGS_LOGO_COLOR: '#E35E57',
+  UNDRLINE_COLOUR: '#7D7D7D',
+  ACTIVE_UNDRLINE_COLOUR: '#E35E57',
+  TRANSPARENT: 'transparent',
+  ANTI_FLASH_WHITE: '#F3F3F3',
+  DARK_GREEN: '#037f51',
+  MEDIUM_GRAY: 'rgba(245,245,245,0.3)',
+  LIGHT_BLACK:'#A0A0A0',
+  ANTI_FLASH_GRAY: '#696969',
+  GREEN: '#008000',
+  ORANGE: '#FFA500',
+  DARK_BLUE: '#00008B',
+};
+
+export const FONTSIZE = {
+  FIFTY: 50,
+  TWENTY_FIVE: 25,
+  TWENTY: 20,
+  TWENTY_TWO: 22,
+  EIGHTEEN: 18,
+  SIXTEEN: 16,
+  FIFTEEN: 15,
+  FOURTEEN: 14,
+  ELEVEN: 11,
+  TWELVE: 12,
+  WELCOME_MSG_FONT_SIZE: 17,
+  EMAIL_SENT_MESSAGE: 10,
+  BUTTON_TEXT_SIZE: 16,
+  FOOTER_BUTTON_TEXT_SIZE: 18,
+  HUNDRED: 100,
+  ERROR_MESSAGE_SIZE: 10,
+  TEN : 10,
+};
+
+export const SIZES = {
+  DEVICE_WIDTH: PLATFORM === 'web' ? 500 : device.width,
+  DEVICE_HEIGHT: device.height,
+  HEADER_HEIGHT: 70,
+  BOTTOM_BAR_HEIGHT: 50,
+  DRAWER: 280,
+  WRAPPER_PADDING: 20,
+  ICONSIZE: 60,
+};
